@@ -25,19 +25,19 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="productName">Name</label>
-                                                <input type="text" class="form-control" id="productName" placeholder="Enter Product Name">
+                                                <input type="text" class="form-control" id="productName" placeholder="Enter Product Name" required="required">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="productUnit">Unit</label>
-                                                <input type="text" class="form-control" id="productUnit" placeholder="Enter Product Unit">
+                                                <input type="text" class="form-control" id="productUnit" placeholder="Enter Product Unit" required="required">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="productRate">Rate</label>
-                                        <input type="text" class="form-control" id="productRate" placeholder="Enter Product Rate">
+                                        <input type="text" class="form-control" id="productRate" placeholder="Enter Product Rate" required="required">
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
@@ -75,6 +75,7 @@
                                                     <option>5</option>
                                                     <option>12</option>
                                                     <option>18</option>
+                                                    <option>28</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -83,19 +84,19 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="productOpeningStockRS">Opening Stock RS</label>
-                                                <input type="text" class="form-control" id="productOpeningStockRS" placeholder="Enter Opening Stock RS">
+                                                <input type="text" class="form-control" id="productOpeningStockRS" placeholder="Enter Opening Stock RS" required="required">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="productOpeningStockUnit">Opening Stock Unit</label>
-                                                <input type="text" class="form-control" id="productOpeningStockUnit" placeholder="Enter Opening Stock Unit">
+                                                <input type="text" class="form-control" id="productOpeningStockUnit" placeholder="Enter Opening Stock Unit" required="required">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Product Type</label>
-                                        <select class="form-control">
+                                        <select class="form-control" required="required">
                                             <option>select options</option>
                                             <option>Product</option>
                                             <option>Service</option>
