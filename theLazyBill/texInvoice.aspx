@@ -7,7 +7,7 @@
           <div class="row">
                 <div class="col-md-12">
                      <div class="card-header">
-                        <h3 class="card-title" style="font-weight: bolder">Invoice</h3>
+                        <h3 class="card-title" style="font-weight: bolder">texInvoice</h3>
                     </div>
                 </div>
             </div>
