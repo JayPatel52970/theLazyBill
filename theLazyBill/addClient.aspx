@@ -39,8 +39,38 @@
                                         <input type="text" class="form-control" id="Website" placeholder="Enter URL" required="required" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="PhoneNo">Phone No.</label>
-                                        <input type="text" class="form-control" id="PhoneNo" placeholder="Enter Phone No." required="required" />
+                                        <label for="PhoneNo1">Phone No.</label>
+                                        <input type="text" class="form-control" id="PhoneNo1" placeholder="Enter Phone No." required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- general form elements for third -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h2 class="card-title">Third Group</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="ContactPersonName">Contact Person Name</label>
+                                        <input type="text" class="form-control" id="ContactPersonName" placeholder="Enter Contact Person Name" required="required" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="EmailId">Email Id</label>
+                                                <input type="text" class="form-control" id="EmailId" placeholder="Enter Email Id" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="PhoneNo2">Phone No.</label>
+                                                <input type="text" class="form-control" id="PhoneNo2" placeholder="Enter Phone No" required="required" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
