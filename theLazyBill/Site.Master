@@ -417,19 +417,19 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/addClient.aspx" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Clients</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/examples/project_edit.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Vendors</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/examples/project_detail.html" class="nav-link">
+                                <a href="/addproduct.aspx" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Products</p>
                                 </a>

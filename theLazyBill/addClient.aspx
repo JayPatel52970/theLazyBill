@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="content">
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <div class="row">
                 <!-- left column -->
                 <div class="col-md-6">
@@ -76,6 +76,50 @@
                             </div>
                         </div>
                     </div>
+                    <!-- general form elements for fourth -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h2 class="card-title">Fourth Group</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Company Opening Balance</label>
+                                        <div class="input-group input-group-md">
+                                            <div class="input-group-prepend">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <select class="form-control">
+                                                            <option class="bg-success text-white">Dr</option>
+                                                            <option class="bg-danger text-white">Cr</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Company Type</label>
+                                                <select class="form-control bg-light text-dark">
+                                                    <option>Clients</option>
+                                                    <option>Vendors</option>
+                                                    <option>Both</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- right column -->
@@ -117,7 +161,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>State</label>
-                                                <select class="form-control">
+                                                <select class="form-control bg-light text-dark">
                                                     <option>Select State</option>
                                                     <option>Gujarat</option>
                                                 </select>
@@ -130,10 +174,12 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <br />
                                     <div class="custom-control custom-checkbox">
                                         <input class="custom-control-input" type="checkbox" id="CheckAddress" value="option1">
                                         <label for="CheckAddress" class="custom-control-label">Shipping Address is same</label>
                                     </div>
+                                    <br />
                                     <br />
                                     <!-- For Shipping Address -->
                                     <h5 class="text-success"><b>Shipping Address</b></h5>
@@ -164,7 +210,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>State</label>
-                                                <select class="form-control">
+                                                <select class="form-control bg-light text-dark">
                                                     <option>Select State</option>
                                                     <option>Gujarat</option>
                                                 </select>
@@ -186,6 +232,28 @@
         </div>
     </section>
 
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label for="FBID" class="col-sm-2 col-form-label">Facebook</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="FBID" placeholder="Facebook ID">
+                    </div>
+                    <label for="InstaID" class="col-sm-2 col-form-label">Instagram</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="InstaID" placeholder="Instagram ID">
+                    </div>
+                </div>
+            </div>
+            <div class="card-body row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-success form-group" style="padding:10px 20px 10px 20px">Submit</button>
+                    <button type="button" class="btn btn-danger form-group" style="padding:10px 10px 10px 10px">Cancle</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 </asp:Content>

@@ -102,16 +102,10 @@
                                             <option>Service</option>
                                         </select>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <asp:Button ID="Submit" runat="server" Text="Submit" Font-Bold="True" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <asp:Button ID="Cancle" runat="server" Text="Cancle" Font-Bold="True" />
-                                            </div>
+                                    <div class="card-body row">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-success form-group" style="padding:10px 20px 10px 20px">Submit</button>
+                                            <button type="button" class="btn btn-danger form-group" style="padding:10px 10px 10px 10px">Cancle</button>
                                         </div>
                                     </div>
                                 </div>
