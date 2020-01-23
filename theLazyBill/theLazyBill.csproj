@@ -1736,6 +1736,7 @@
     <Content Include="texInvoiceReport.aspx" />
     <Content Include="addProduct.aspx" />
     <Content Include="addClient.aspx" />
+    <Content Include="myCompany.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1794,6 +1795,13 @@
     </Compile>
     <Compile Include="addClient.aspx.designer.cs">
       <DependentUpon>addClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myCompany.aspx.cs">
+      <DependentUpon>myCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myCompany.aspx.designer.cs">
+      <DependentUpon>myCompany.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
