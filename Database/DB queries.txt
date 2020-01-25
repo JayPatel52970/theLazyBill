@@ -1,0 +1,496 @@
+CREATE TABLE [dbo].[tblBanks] (
+    [bankID]        INT          NOT NULL,
+    [bankName]      VARCHAR (50) NOT NULL,
+    [bankAC]        VARCHAR (50) NULL,
+    [bankISFC]      VARCHAR (50) NULL,
+    [bankADD]       VARCHAR (50) NULL,
+    [bankBranch]    VARCHAR (50) NULL,
+    [bankOPBalance] FLOAT (53)   NULL,
+    PRIMARY KEY CLUSTERED ([bankID] ASC)
+);
+
+CREATE TABLE [dbo].[tblBankTrn]
+(
+	[bankTrnID] INT NOT NULL PRIMARY KEY, 
+    [bankID] INT NOT NULL, 
+    [voucherID] INT NOT NULL, 
+    [bankDate] DATE NOT NULL, 
+    [trnCRamt] FLOAT NULL, 
+    [trnDRamt] FLOAT NULL, 
+    [trnNarration] VARCHAR(150) NULL, 
+    [trnFrom] INT NOT NULL
+)
+
+CREATE TABLE [dbo].[tblBillOfSupply] (
+    [billOfSupplyNo]      INT          NOT NULL,
+    [billDate]            DATE         NOT NULL,
+    [billOther1]          VARCHAR (50) NULL,
+    [billOther2]          VARCHAR (50) NULL,
+    [billInterState]      VARCHAR (50) NULL,
+    [billCashOrCredit]    VARCHAR (50) NULL,
+    [billcustomerID]      INT          NOT NULL,
+    [billSubTotal]        FLOAT (53)   NOT NULL,
+    [billCGST]            FLOAT (53)   NOT NULL,
+    [billSGST]            FLOAT (53)   NOT NULL,
+    [billIGST]            FLOAT (53)   NOT NULL,
+    [billOtherChargesper] FLOAT (53)   NULL,
+    [billOtherCharges]    FLOAT (53)   NULL,
+	[billDiscount]    FLOAT (53)   NULL,
+    [roundUP]             FLOAT (53)   NULL,
+    [billTotal]           FLOAT (53)   NULL,
+    [timeStemp]           DATETIME     NOT NULL,
+    [userID]              INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([billOfSupplyNo] ASC)
+);
+
+CREATE TABLE [dbo].[tblVouClients]
+(
+	[VoucherID] INT NOT NULL PRIMARY KEY, 
+    [CompanyName] VARCHAR(50) NULL, 
+    [CompanyShipAdd1] VARCHAR(50) NULL, 
+    [CompanyShipAdd2] VARCHAR(50) NULL, 
+    [CompanyShipCity] VARCHAR(50) NULL, 
+    [CompanyShipPinCode] VARCHAR(50) NULL, 
+    [CompanyShipState] VARCHAR(50) NULL, 
+    [CompanyShipNation] VARCHAR(50) NULL, 
+    [CompanyBillAdd1] VARCHAR(50) NULL, 
+    [CompanyBillAdd2] VARCHAR(50) NULL, 
+    [CompanyBillCity] VARCHAR(50) NULL, 
+    [CompanyBillPinCode] VARCHAR(50) NULL, 
+    [CompanyBillState] VARCHAR(50) NULL, 
+    [CompanyBillNation] VARCHAR(50) NULL, 
+    [CompanyGSTNo] VARCHAR(50) NULL, 
+    [CompanyAadharNo] VARCHAR(50) NULL, 
+    [CompanyWebsite] VARCHAR(50) NULL, 
+    [CompanyPhone] VARCHAR(50) NULL, 
+    [CompanyContactPerson] VARCHAR(50) NULL, 
+    [CompanyContactEmail] VARCHAR(50) NULL, 
+    [CompanyContactPhone] VARCHAR(50) NULL, 
+    [CompanyTypeID] VARCHAR(50) NULL, 
+    [CompanyOpeningBalance] VARCHAR(50) NULL, 
+    [CompanyOtherFB] VARCHAR(50) NULL, 
+    [CompanyOtherInsta] VARCHAR(50) NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblVouLedgers]
+(
+	[tblVouExpID] INT NOT NULL PRIMARY KEY, 
+    [expName] VARCHAR(50) NULL, 
+    [expAddress] VARCHAR(50) NULL, 
+    [expMobile] VARCHAR(50) NULL, 
+    [expGSTNo] VARCHAR(50) NULL, 
+    [expOpeningBalance] VARCHAR(50) NULL, 
+    [expNarration] VARCHAR(50) NULL, 
+    [expType] VARCHAR(50) NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+
+
+
+CREATE TABLE [dbo].[tblBillOfSupplyGSTInfo] (
+    [gstInfoID]      INT        NOT NULL,
+    [billOfSupplyID] INT        NOT NULL,
+    [GSTat0]         FLOAT (53) NOT NULL,
+    [GSTat5]         FLOAT (53) NOT NULL,
+    [GSTat12]        FLOAT (53) NOT NULL,
+    [GSTat18]        FLOAT (53) NOT NULL,
+    [GSTat28]        FLOAT (53) NOT NULL,
+    [SALEat0]        FLOAT (53) NOT NULL,
+    [SALEat5]        FLOAT (53) NOT NULL,
+    [SALEat12]       FLOAT (53) NOT NULL,
+    [SALEat18]       FLOAT (53) NOT NULL,
+    [SALEat28]       FLOAT (53) NOT NULL,
+	[Dicsat0] FLOAT NOT NULL, 
+    [Dicsat5] FLOAT NOT NULL, 
+    [Dicsat12] FLOAT NOT NULL, 
+    [Dicsat18] FLOAT NOT NULL, 
+    [Dicsat28] FLOAT NOT NULL,
+    [billDate]       DATE       NOT NULL,
+    [timeStemp]      DATETIME   NOT NULL,
+    [userID]         INT        NOT NULL,
+    PRIMARY KEY CLUSTERED ([gstInfoID] ASC)
+);
+
+
+
+CREATE TABLE [dbo].[tblBillOfSupplyLine] (
+    [billOfSupplyLineID] INT        NOT NULL,
+    [billOfSupplyID]     INT        NOT NULL,
+    [customerID]         INT        NOT NULL,
+    [productID]          INT        NOT NULL,
+    [billQTY]            FLOAT (53) NULL,
+    [billRate]           FLOAT (53) NULL,
+    [billLineTotal]      FLOAT (53) NULL,
+    [billCGSTPer]        FLOAT (53) NULL,
+    [billCGST]           FLOAT (53) NULL,
+    [billSGSTPer]        FLOAT (53) NULL,
+    [billSGST]           FLOAT (53) NULL,
+    [billIGSTPer]        FLOAT (53) NULL,
+    [billIGST]           FLOAT (53) NULL,
+    [billDiscountPer]    FLOAT (53) NULL,
+    [billDiscount]       FLOAT (53) NULL,
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL, 
+    PRIMARY KEY CLUSTERED ([billOfSupplyLineID] ASC)
+);
+
+CREATE TABLE [dbo].[tblCompany] (
+    [compID]          INT          NOT NULL,
+    [compName]        VARCHAR (50) NOT NULL,
+    [compADD1]        VARCHAR (50) NULL,
+    [compADD2]        VARCHAR (50) NULL,
+    [compPhone]       VARCHAR (50) NULL,
+    [compMobile]      VARCHAR (50) NULL,
+    [compEmail]       VARCHAR (50) NULL,
+    [compWebsite]     VARCHAR (50) NULL,
+    [compGSTIN]       VARCHAR (50) NULL,
+    [compTINNO]       VARCHAR (50) NULL,
+    [compBankAC]      VARCHAR (50) NULL,
+    [compBankISFC]    VARCHAR (50) NULL,
+    [compBankName]    VARCHAR (50) NULL,
+    [compBankBranch]  VARCHAR (50) NULL,
+    [companyAPIID]    VARCHAR (50) NULL,
+    [companyUniqueID] VARCHAR (50) NULL,
+    [compUserName]    VARCHAR (50) NULL,
+    [compUserEmail]   VARCHAR (50) NULL,
+    [compUserPhone]   VARCHAR (50) NULL,
+    [compFacebook]    VARCHAR (10) NULL,
+    [compInstagram]   VARCHAR (50) NULL,
+    [timeStemp]       DATETIME     NOT NULL,
+    [userID]          INT          NULL,
+    PRIMARY KEY CLUSTERED ([compID] ASC)
+);
+
+CREATE TABLE [dbo].[tblCompanySetup]
+(
+	[other1Name] VARCHAR(50) NOT NULL, 
+    [other2Name] VARCHAR(50) NULL, 
+    [otherChargesName] VARCHAR(50) NULL, 
+    [compTC1] VARCHAR(50) NULL, 
+    [compTC2] VARCHAR(50) NULL, 
+    [compTC3] VARCHAR(50) NULL, 
+    [compBillOfSupplyPre] VARCHAR(50) NULL, 
+    [compBillOfSupplyPost] VARCHAR(50) NULL, 
+    [compRetailInvoicePre] VARCHAR(50) NULL, 
+    [compRetailInvoicePost] VARCHAR(50) NULL, 
+    [compPurchasePre] VARCHAR(50) NULL, 
+    [compPurchasePost] VARCHAR(50) NULL, 
+    [billPrintFormat] VARCHAR(50) NULL, 
+    [texPrintFormat] VARCHAR(50) NULL, 
+    [decimalDigits] VARCHAR(50) NULL, 
+    [compLogoURL] VARCHAR(50) NULL, 
+    [timeStemp] DATETIME NOT NULL, 
+    [userID] INT NOT NULL 
+)
+
+CREATE TABLE [dbo].[tblCreditNote]
+(
+	[creditNoteID] INT NOT NULL PRIMARY KEY, 
+    [creditInvoiceNo] VARCHAR(50) NULL, 
+    [creditNoteDate] DATE NULL, 
+    [reason] VARCHAR(150) NULL, 
+    [creditSubTotal] FLOAT NULL, 
+    [creditCGST] FLOAT NULL, 
+    [creditSGST] FLOAT NULL, 
+    [creditIGST] FLOAT NULL, 
+    [creditOtherChargesper] FLOAT NULL, 
+    [creditOther] FLOAT NULL, 
+    [roundUP] FLOAT NULL, 
+    [creditTotal] FLOAT NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblCreditNoteLine]
+(
+	[creditNoteLineID] INT NOT NULL PRIMARY KEY, 
+    [creditNoteID] INT NULL, 
+    [customerID] INT NULL, 
+    [productID] INT NULL, 
+    [creditQTY] FLOAT NULL, 
+    [creditRate] FLOAT NULL, 
+    [creditLineTotal] FLOAT NULL, 
+    [creditCGSTPer] FLOAT NULL, 
+    [creditCGST] FLOAT NULL, 
+    [creditSGSTPer] FLOAT NULL, 
+    [creditSGST] FLOAT NULL, 
+    [creditIGSTPer] FLOAT NULL, 
+    [creditIGST] FLOAT NULL, 
+    [creditDiscount] FLOAT NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblExpences]
+(
+	[expID] INT NOT NULL PRIMARY KEY, 
+    [expVouNo] VARCHAR(50) NULL, 
+    [expVouID] VARCHAR(50) NULL, 
+    [expDate] DATE NULL, 
+    [expBank] VARCHAR(50) NULL, 
+    [expName] VARCHAR(50) NULL, 
+    [expAmount] VARCHAR(50) NULL, 
+    [expGSTPer] FLOAT NULL, 
+    [expCGST] FLOAT NULL, 
+    [expSGST] FLOAT NULL, 
+    [expIGST] FLOAT NULL, 
+    [expNarration] VARCHAR(50) NULL, 
+    [expBankTrnID] INT NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblLedgerGroup]
+(
+	[ledgerGroupID] INT NOT NULL PRIMARY KEY, 
+    [ledgerGroup] VARCHAR(50) NULL,
+	    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblPayment]
+(
+	[paymentMadeID] INT NOT NULL PRIMARY KEY, 
+    [paymentMadeDate] DATE NULL, 
+    [paymentMadeBankID] INT NULL, 
+    [customerID] INT NULL, 
+    [paymentMadeAmount] FLOAT NULL, 
+    [paymentMadeNarration] VARCHAR(50) NULL, 
+    [paymentMadeBankTrnID] INT NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblPaymentMadeLine]
+(
+	[paymentMadeLineID] INT NOT NULL PRIMARY KEY, 
+    [paymentMadeID] INT NULL, 
+    [paymentMadeBillID] INT NULL, 
+    [paymentMadeBillTypeID] INT NULL, 
+    [paymentMadeAmount] FLOAT NULL, 
+    [paymentBankID] INT NULL, 
+    [paymenrBankTrnID] INT NULL,
+  [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblPaymentReceive]
+(
+	[receiveID] INT NOT NULL PRIMARY KEY, 
+    [receiveDate] DATE NULL, 
+    [receiveBankID] INT NULL, 
+    [customerID] INT NULL, 
+    [receiveAmount] FLOAT NULL, 
+    [receiveNarration] VARCHAR(50) NULL, 
+    [receiveBankTrnID] INT NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblPaymentReceiveLine]
+(
+	[paymentReceiveLineID] INT NOT NULL PRIMARY KEY, 
+    [paymentReceiveID] INT NULL, 
+    [paymentReceiveInvoiceID] INT NULL, 
+    [paymentReceiveInvoiceTypeID] INT NULL, 
+    [paymentReceiveAmount] FLOAT NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+CREATE TABLE [dbo].[tblProduct]
+(
+	[productID] INT NOT NULL PRIMARY KEY, 
+    [productHSNNO] VARCHAR(50) NULL, 
+    [productName] VARCHAR(50) NULL, 
+    [productUnit] VARCHAR(50) NULL, 
+    [productRate] FLOAT NULL, 
+    [productCGST] FLOAT NULL, 
+    [productSGST] FLOAT NULL, 
+    [productIGST] FLOAT NULL, 
+    [productOpeningStockRS] FLOAT NULL, 
+    [productOpeningStockUNIT] FLOAT NULL, 
+    [productType] INT NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblPurchase] (
+    [purID]              INT          NOT NULL,
+    [purNo]              VARCHAR (50) NULL,
+    [purDate]            DATE         NOT NULL,
+    [purOther1]          VARCHAR (50) NULL,
+    [purOther2]          VARCHAR (50) NULL,
+    [purInterState]      VARCHAR (50) NULL,
+    [purCashOrCredit]    VARCHAR (50) NULL,
+    [purCustomerID]      INT          NOT NULL,
+    [purSubTotal]        FLOAT (53)   NOT NULL,
+    [purCGST]            FLOAT (53)   NOT NULL,
+    [purSGST]            FLOAT (53)   NOT NULL,
+    [purIGST]            FLOAT (53)   NOT NULL,
+    [purOtherChargesper] FLOAT (53)   NULL,
+    [purOtherCharges]    FLOAT (53)   NULL,
+	[purDiscount]    FLOAT (53)   NULL,
+    [roundUP]            FLOAT (53)   NULL,
+    [purTotal]           FLOAT (53)   NULL,
+    [timeStemp]          DATETIME     NOT NULL,
+    [userID]             INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([purID] ASC)
+);
+
+CREATE TABLE [dbo].[tblPurchaseGSTInfo] (
+    [gstInfoID]  INT        NOT NULL,
+    [purchaseID] INT        NOT NULL,
+    [GSTat0]     FLOAT (53) NOT NULL,
+    [GSTat5]     FLOAT (53) NOT NULL,
+    [GSTat12]    FLOAT (53) NOT NULL,
+    [GSTat18]    FLOAT (53) NOT NULL,
+    [GSTat28]    FLOAT (53) NOT NULL,
+    [purAt0]     FLOAT (53) NOT NULL,
+    [purAt5]     FLOAT (53) NOT NULL,
+    [purAt12]    FLOAT (53) NOT NULL,
+    [purAt18]    FLOAT (53) NOT NULL,
+    [purAt28]    FLOAT (53) NOT NULL,
+	[Dicsat0] FLOAT NOT NULL, 
+    [Dicsat5] FLOAT NOT NULL, 
+    [Dicsat12] FLOAT NOT NULL, 
+    [Dicsat18] FLOAT NOT NULL, 
+    [Dicsat28] FLOAT NOT NULL,
+    [purDate]    DATE       NOT NULL,
+    [timeStemp]  DATETIME   NOT NULL,
+    [userID]     INT        NOT NULL,
+    PRIMARY KEY CLUSTERED ([gstInfoID] ASC)
+);
+
+
+CREATE TABLE [dbo].[tblPurchaseLine] (
+    [purLineID] INT        NOT NULL,
+    [purNo]     INT        NOT NULL,
+    [purCustomerID]         INT        NOT NULL,
+    [purProductID]          INT        NOT NULL,
+    [purQTY]            FLOAT (53) NULL,
+    [purRate]           FLOAT (53) NULL,
+    [purLineTotal]      FLOAT (53) NULL,
+    [purCGSTPer]        FLOAT (53) NULL,
+    [purCGST]           FLOAT (53) NULL,
+    [purSGSTPer]        FLOAT (53) NULL,
+    [purSGST]           FLOAT (53) NULL,
+    [purIGSTPer]        FLOAT (53) NULL,
+    [purIGST]           FLOAT (53) NULL,
+    [purDiscountPer]    FLOAT (53) NULL,
+    [purDiscount]       FLOAT (53) NULL,
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL, 
+    PRIMARY KEY CLUSTERED ([purLineID] ASC)
+);
+
+CREATE TABLE [dbo].[tblQuotation]
+(
+	[quoID] INT NOT NULL PRIMARY KEY, 
+	[quoNo] VARCHAR(50) NULL, 
+    [quoDate] DATE NOT NULL, 
+    [quoInterState] VARCHAR(50) NULL, 
+    [quoCashOrCredit] VARCHAR(50) NULL, 
+    [quoCustomerID] INT NOT NULL, 
+    [quoSubTotal] FLOAT NOT NULL, 
+    [quoCGST] FLOAT NOT NULL, 
+    [quoSGST] FLOAT NOT NULL, 
+    [quoIGST] FLOAT NOT NULL, 
+    [quoOtherChargesper] FLOAT NULL, 
+    [quoOtherCharges] FLOAT NULL, 
+    [roundUP] FLOAT NULL, 
+    [quoTotal] FLOAT NULL, 
+    [timeStemp] DATETIME NOT NULL, 
+    [userID] INT NOT NULL
+)
+
+CREATE TABLE [dbo].[tblQuotationLine]
+(
+	[quoLineID] INT NOT NULL PRIMARY KEY, 
+    [quoNo] VARCHAR(50) NULL, 
+    [customerID] INT NULL, 
+    [productID] INT NULL, 
+    [quoQTY] FLOAT NULL, 
+    [quoRate] FLOAT NULL, 
+    [quoLineTotal] FLOAT NULL, 
+    [quoCGSTPer] FLOAT NULL, 
+    [quoCGST] FLOAT NULL, 
+    [quoSGSTPer] FLOAT NULL, 
+    [quoSGST] FLOAT NULL, 
+    [quoIGSTPer] FLOAT NULL,
+    [quoIGST] FLOAT NULL,
+    [quoDiscountPer] FLOAT NULL, 
+    [quoDiscount] FLOAT NULL, 
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL
+)
+
+CREATE TABLE [dbo].[tblTexInvoice]
+(
+	[texInvoiceNo] INT NOT NULL PRIMARY KEY, 
+    [texDate] DATE NOT NULL, 
+    [texOther1] VARCHAR(50) NULL, 
+    [texOther2] VARCHAR(50) NULL, 
+    [texInterState] VARCHAR(50) NULL, 
+    [texCashOrCredit] VARCHAR(50) NULL, 
+    [texcustomerID] INT NOT NULL, 
+    [texSubTotal] FLOAT NOT NULL, 
+    [texCGST] FLOAT NOT NULL, 
+    [texSGST] FLOAT NOT NULL, 
+    [texIGST] FLOAT NOT NULL, 
+    [texOtherChargesper] FLOAT NULL, 
+    [texOtherCharges] FLOAT NULL, 
+	[texDiscount] FLOAT NULL,
+    [roundUP] FLOAT NULL, 
+    [texTotal] FLOAT NULL, 
+    [timeStemp] DATETIME NOT NULL, 
+    [userID] INT NOT NULL
+)
+
+CREATE TABLE [dbo].[tblTexInvoiceGSTInfo]
+(
+	[gstInfoID] INT NOT NULL PRIMARY KEY, 
+    [texInvoiceID] INT NOT NULL, 
+    [GSTat0] FLOAT NOT NULL, 
+    [GSTat5] FLOAT NOT NULL, 
+    [GSTat12] FLOAT NOT NULL, 
+    [GSTat18] FLOAT NOT NULL, 
+    [GSTat28] FLOAT NOT NULL, 
+    [SALEat0] FLOAT NOT NULL, 
+    [SALEat5] FLOAT NOT NULL, 
+    [SALEat12] FLOAT NOT NULL, 
+    [SALEat18] FLOAT NOT NULL, 
+    [SALEat28] FLOAT NOT NULL, 
+	[Dicsat0] FLOAT NOT NULL, 
+    [Dicsat5] FLOAT NOT NULL, 
+    [Dicsat12] FLOAT NOT NULL, 
+    [Dicsat18] FLOAT NOT NULL, 
+    [Dicsat28] FLOAT NOT NULL,
+    [texDate] DATE NOT NULL, 
+    [timeStemp] DATETIME NOT NULL, 
+    [userID] INT NOT NULL
+)
+
+CREATE TABLE [dbo].[tblTexInvoiceLine] (
+    [texInvoiceLineID] INT        NOT NULL ,
+    [texInvoiceID]     INT        NOT NULL,
+    [customerID]         INT        NOT NULL,
+    [productID]          INT        NOT NULL,
+    [texQTY]            FLOAT (53) NULL,
+    [texRate]           FLOAT (53) NULL,
+    [texLineTotal]      FLOAT (53) NULL,
+    [texCGSTPer]        FLOAT (53) NULL,
+    [texCGST]           FLOAT (53) NULL,
+    [texSGSTPer]        FLOAT (53) NULL,
+    [texSGST]           FLOAT (53) NULL,
+    [texIGSTPer]        FLOAT (53) NULL,
+    [texIGST]           FLOAT (53) NULL,
+    [texDiscountPer]    FLOAT (53) NULL,
+    [texDiscount]       FLOAT (53) NULL,
+    [timeStemp] DATETIME NULL, 
+    [userID] INT NULL, 
+    PRIMARY KEY CLUSTERED ([texInvoiceLineID] ASC)
+);

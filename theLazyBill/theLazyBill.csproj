@@ -69,6 +69,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DBLocal.mdf" />
+    <Content Include="App_Data\DBLocal_log.ldf">
+      <DependentUpon>DBLocal.mdf</DependentUpon>
+    </Content>
     <Content Include="dist\css\adminlte.css" />
     <Content Include="dist\css\adminlte.min.css" />
     <Content Include="dist\css\alt\adminlte.components.css" />
@@ -1735,6 +1739,17 @@
     <Content Include="Dashboard.aspx" />
     <Content Include="texInvoiceReport.aspx" />
     <Content Include="addProduct.aspx" />
+    <Content Include="addClient.aspx" />
+    <Content Include="addPayments.aspx" />
+    <Content Include="addExpences.aspx" />
+    <Content Include="insertDebitNote.aspx" />
+    <Content Include="insertCreditNote.aspx" />
+    <Content Include="purchaseEntry.aspx" />
+    <Content Include="createQuotation.aspx" />
+    <Content Include="addLedgers..aspx" />
+    <Content Include="addLedgersGroup.aspx" />
+    <Content Include="myCompany.aspx" />
+    <Content Include="preferences.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1786,6 +1801,83 @@
     </Compile>
     <Compile Include="addProduct.aspx.designer.cs">
       <DependentUpon>addProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addClient.aspx.cs">
+      <DependentUpon>addClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addClient.aspx.designer.cs">
+      <DependentUpon>addClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addPayments.aspx.cs">
+      <DependentUpon>addPayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addPayments.aspx.designer.cs">
+      <DependentUpon>addPayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addExpences.aspx.cs">
+      <DependentUpon>addExpences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addExpences.aspx.designer.cs">
+      <DependentUpon>addExpences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="insertDebitNote.aspx.cs">
+      <DependentUpon>insertDebitNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="insertDebitNote.aspx.designer.cs">
+      <DependentUpon>insertDebitNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="insertCreditNote.aspx.cs">
+      <DependentUpon>insertCreditNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="insertCreditNote.aspx.designer.cs">
+      <DependentUpon>insertCreditNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchaseEntry.aspx.cs">
+      <DependentUpon>purchaseEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchaseEntry.aspx.designer.cs">
+      <DependentUpon>purchaseEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createQuotation.aspx.cs">
+      <DependentUpon>createQuotation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="createQuotation.aspx.designer.cs">
+      <DependentUpon>createQuotation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addLedgers..aspx.cs">
+      <DependentUpon>addLedgers..aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addLedgers..aspx.designer.cs">
+      <DependentUpon>addLedgers..aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addLedgersGroup.aspx.cs">
+      <DependentUpon>addLedgersGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addLedgersGroup.aspx.designer.cs">
+      <DependentUpon>addLedgersGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myCompany.aspx.cs">
+      <DependentUpon>myCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myCompany.aspx.designer.cs">
+      <DependentUpon>myCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="preferences.aspx.cs">
+      <DependentUpon>preferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="preferences.aspx.designer.cs">
+      <DependentUpon>preferences.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

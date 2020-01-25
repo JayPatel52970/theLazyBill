@@ -186,34 +186,28 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/invoice.aspx" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Invoice</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/texInvoice.aspx" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Tex Invoice</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/billOfSupply.aspx" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Bill Of Supply</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Excise Invoice</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/createQuotation.aspx" class="nav-link">
                             <i class="nav-icon ion ion-clipboard"></i>
                             <p>
                                 Make Quotation
@@ -221,7 +215,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/purchaseEntry.aspx" class="nav-link">
                             <i class="nav-icon ion ion-ios-bookmarks"></i>
                             <p>
                                 Purchase Entry 
@@ -229,7 +223,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/insertCreditNote.aspx" class="nav-link">
                             <i class="nav-icon fas fa-sticky-note"></i>
                             <p>
                                 Credit Note 
@@ -237,7 +231,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/insertDebitNote.aspx" class="nav-link">
                             <i class="nav-icon ion ion-ios-book"></i>
                             <p>
                                 Debit Note 
@@ -245,7 +239,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/addExpences.aspx" class="nav-link">
                             <i class="nav-icon fas fa-dollar-sign"></i>
                             <p>
                                 Expences
@@ -253,7 +247,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/addPayments.aspx" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Receipts ( Payments )
@@ -265,7 +259,7 @@
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon ion ion-android-map"></i>
-                            <p>
+                            <%--<p>--%>
                                 Sales Reports
                 <i class="fas fa-angle-left right"></i>
                             </p>
@@ -417,27 +411,33 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/addClient.aspx" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Clients</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/examples/project_edit.html" class="nav-link">
+                                <a href="/addClient.aspx" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Vendors</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/examples/project_detail.html" class="nav-link">
+                                <a href="/addProduct.aspx" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Products</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/addLedgers.aspx" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Add Expences</p>
+                                    <p>Add Ledgers</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/addLedgersGroup.aspx" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Add Ledgers Group</p>
                                 </a>
                             </li>
                         </ul>
@@ -492,13 +492,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/myCompany.aspx" class="nav-link">
                             <i class="nav-icon far fa-circle text-info"></i>
                             <p>My Company</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/preferences.aspx" class="nav-link">
                             <i class="nav-icon far fa-circle text-warning"></i>
                             <p>Preferences</p>
                         </a>
