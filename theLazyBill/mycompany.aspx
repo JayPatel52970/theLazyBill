@@ -20,11 +20,18 @@
                                     <!-- 1st -->
                                     <div class="row">
                                         <div class="col-md-6">
+                                            <br />
+                                            <h5 class="text-success form-group"><b>Company Info.</b></h5>
+                                            <br />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="CompanyName">Company Name</label>
-                                                        <input type="text" class="form-control" id="CompanyName" placeholder="Enter Company Name" required="required" />
+                                                        <asp:TextBox ID="txtCompName" runat="server" class="form-control" placeholder="Enter Company Name" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -32,7 +39,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="Address1">Address 1</label>
-                                                        <input type="text" class="form-control" id="Address1" placeholder="Enter Address 1" required="required" />
+                                                        <asp:TextBox ID="txtCompAdd1" runat="server" class="form-control" placeholder="Enter Address 1" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -40,7 +47,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="Address2">Address 2</label>
-                                                        <input type="text" class="form-control" id="Address2" placeholder="Enter Address 2" required="required" />
+                                                        <asp:TextBox ID="txtCompAdd2" runat="server" class="form-control" placeholder="Enter Address 2" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -48,13 +55,13 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="PhoneNo">Phone No.</label>
-                                                        <input type="text" class="form-control" id="PhoneNo" placeholder="Enter Phone No" required="required" />
+                                                        <asp:TextBox ID="txtCompPhone" runat="server" class="form-control" placeholder="Enter Phone No." required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="MobileNo">Mobile No.</label>
-                                                        <input type="text" class="form-control" id="MobileNo" placeholder="Enter Mobile No" required="required" />
+                                                        <asp:TextBox ID="txtCompMobile" runat="server" class="form-control" placeholder="Enter Mobile No." required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -62,13 +69,13 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="EmailID">Email ID</label>
-                                                        <input type="text" class="form-control" id="EmailID" placeholder="Enter Email ID" required="required" />
+                                                        <asp:TextBox ID="txtCompEmail" runat="server" class="form-control" placeholder="Enter Email ID" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="Website">Website</label>
-                                                        <input type="text" class="form-control" id="Website" placeholder="Enter Website" required="required" />
+                                                        <asp:TextBox ID="txtCompWebsite" runat="server" class="form-control" placeholder="Enter Website" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -91,13 +98,13 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="GSTNo">GST No</label>
-                                                        <input type="text" class="form-control" id="GSTNo" placeholder="Enter GST No" required="required" />
+                                                        <asp:TextBox ID="txtCompGst" runat="server" class="form-control" placeholder="Enter GST No." required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="TINNo">TIN No</label>
-                                                        <input type="text" class="form-control" id="TINNo" placeholder="Enter TIN No" required="required" />
+                                                        <asp:TextBox ID="txtCompTin" runat="server" class="form-control" placeholder="Enter TIN No." required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -105,13 +112,13 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="BankACNo">Bank AC No</label>
-                                                        <input type="text" class="form-control" id="BankACNo" placeholder="Enter Bank AC No" required="required" />
+                                                        <asp:TextBox ID="txtCompBank" runat="server" class="form-control" placeholder="Enter Bank AC No." required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="BankIFSCCode">Bank IFSC Code</label>
-                                                        <input type="text" class="form-control" id="BankIFSCCode" placeholder="Enter Bank IFSC Code" required="required" />
+                                                        <asp:TextBox ID="txtCompIFSC" runat="server" class="form-control" placeholder="Enter Bank IFSC Code" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -119,7 +126,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="BankName">Bank Name</label>
-                                                        <input type="text" class="form-control" id="BankName" placeholder="Enter Bank Name" required="required" />
+                                                        <asp:TextBox ID="txtCompBankName" runat="server" class="form-control" placeholder="Enter Bank Name" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,7 +134,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="BankBranchName">Bank Branch Name</label>
-                                                        <input type="text" class="form-control" id="BankBranchName" placeholder="Enter Bank Branch Name" required="required" />
+                                                        <asp:TextBox ID="txtCompBBName" runat="server" class="form-control" placeholder="Enter Bank Branch Name" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -143,7 +150,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="UserName">User Name</label>
-                                                        <input type="text" class="form-control" id="UserName" placeholder="Enter User Name" required="required" />
+                                                        <asp:TextBox ID="txtCompUser" runat="server" class="form-control" placeholder="Enter User Name" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -151,7 +158,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="EmailId">Email Id</label>
-                                                        <input type="text" class="form-control" id="EmailId" placeholder="Enter Email Id" required="required" />
+                                                        <asp:TextBox ID="txtCompUserEmail" runat="server" class="form-control" placeholder="Enter Email ID" required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -159,7 +166,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="PhoneNo.">Phone No.</label>
-                                                        <input type="text" class="form-control" id="PhoneNo." placeholder="Enter Phone No." required="required" />
+                                                        <asp:TextBox ID="txtCompUserPhone" runat="server" class="form-control" placeholder="Enter Phone No." required="required"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -175,29 +182,30 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="APIId">API Id</label>
-                                                                <input type="text" class="form-control" id="APIId" placeholder="Enter API Id" required="required" />
+                                                                <asp:TextBox ID="txtCompAPI" runat="server" class="form-control" placeholder="Enter API ID" required="required"></asp:TextBox>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="UniqueID">Unique ID</label>
-                                                                <input type="text" class="form-control" id="UniqueID" placeholder="Enter Unique ID" required="required" />
+                                                                <asp:TextBox ID="txtCompUnique" runat="server" class="form-control" placeholder="Enter Unique ID" required="required"></asp:TextBox>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <label for="FBID" class="col-sm-4 col-form-label">Company Facebook ID</label>
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="FBID" placeholder="Facebook ID">
+                                                            <asp:TextBox ID="txtCompFb" runat="server" class="form-control" placeholder="Facebook ID" required="required"></asp:TextBox>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <label for="InstaID" class="col-sm-4 col-form-label">Company Instagram ID</label>
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="InstaID" placeholder="Instagram ID">
+                                                            <asp:TextBox ID="txtCompInsta" runat="server" class="form-control" placeholder="Instagram ID" required="required"></asp:TextBox>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -207,14 +215,13 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
     <section>
         <div class="card-body row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-success form-group" style="padding: 10px 20px 10px 20px">Submit</button>
-                <button type="button" class="btn btn-danger form-group" style="padding: 10px 10px 10px 10px">Cancle</button>
+                <asp:Button ID="btnCompSubmitBt" runat="server" class="btn btn-success form-group" Style="padding: 10px 20px 10px 20px" Text="Submit" />
+                <asp:Button ID="btnCompCancleBt" runat="server" class="btn btn-danger form-group" Style="padding: 10px 10px 10px 10px" Text="Cancle" />
             </div>
         </div>
     </section>
