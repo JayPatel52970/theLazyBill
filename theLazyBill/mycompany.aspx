@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <section class="content">
@@ -31,7 +32,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="CompanyName">Company Name</label>
-                                                        <asp:TextBox ID="txtCompName" runat="server" class="form-control" placeholder="Enter Company Name" required="required"></asp:TextBox>
+                                                        <asp:TextBox ID="txtCompName" runat="server" class="form-control" placeholder="Enter Company Name" required="required" TextMode="SingleLine"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -55,7 +56,8 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="PhoneNo">Phone No.</label>
-                                                        <asp:TextBox ID="txtCompPhone" runat="server" class="form-control" placeholder="Enter Phone No." required="required"></asp:TextBox>
+                                                        <asp:TextBox ID="txtCompPhone" runat="server" class="form-control" placeholder="Enter Phone No." required="required" TextMode="Number"></asp:TextBox>
+
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
@@ -225,10 +227,5 @@
             </div>
         </div>
     </section>
-
-
-
-
-
 
 </asp:Content>

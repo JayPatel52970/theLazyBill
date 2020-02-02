@@ -1728,6 +1728,7 @@
     <Content Include="plugins\toastr\toastr.css" />
     <Content Include="plugins\toastr\toastr.min.css" />
     <Content Include="plugins\toastr\toastr.min.js" />
+    <Content Include="temp.aspx" />
     <Content Include="Web.config" />
     <Content Include="texInvoice.aspx" />
     <Content Include="billOfSupply.aspx" />
@@ -1737,6 +1738,8 @@
     <Content Include="addProduct.aspx" />
     <Content Include="addClient.aspx" />
     <Content Include="myCompany.aspx" />
+    <Content Include="addExpences.aspx" />
+    <Content Include="WebForm10.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1746,6 +1749,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="temp.aspx.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="temp.aspx.designer.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
     </Compile>
     <Compile Include="texInvoice.aspx.cs">
       <DependentUpon>texInvoice.aspx</DependentUpon>
@@ -1802,6 +1812,20 @@
     </Compile>
     <Compile Include="myCompany.aspx.designer.cs">
       <DependentUpon>myCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addExpences.aspx.cs">
+      <DependentUpon>addExpences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addExpences.aspx.designer.cs">
+      <DependentUpon>addExpences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm10.aspx.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm10.aspx.designer.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
