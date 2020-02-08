@@ -121,6 +121,7 @@
     <Content Include="dist\js\pages\dashboard.js" />
     <Content Include="dist\js\pages\dashboard2.js" />
     <Content Include="dist\js\pages\dashboard3.js" />
+    <Content Include="iframe.html" />
     <Content Include="page\calendar.html" />
     <Content Include="page\charts\chartjs.html" />
     <Content Include="page\charts\flot.html" />
@@ -170,6 +171,8 @@
     <Content Include="page\UI\sliders.html" />
     <Content Include="page\UI\timeline.html" />
     <Content Include="page\widgets.html" />
+    <Content Include="Photos\icons8-delete-64.png" />
+    <Content Include="Photos\icons8-edit-30.png" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css" />
     <Content Include="plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
@@ -1740,6 +1743,7 @@
     <Content Include="myCompany.aspx" />
     <Content Include="addExpences.aspx" />
     <Content Include="WebForm10.aspx" />
+    <Content Include="WebForm11.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1826,6 +1830,13 @@
     </Compile>
     <Compile Include="WebForm10.aspx.designer.cs">
       <DependentUpon>WebForm10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm11.aspx.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm11.aspx.designer.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1926,6 +1937,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

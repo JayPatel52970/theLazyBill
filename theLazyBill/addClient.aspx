@@ -36,11 +36,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="Website">Website</label>
-                                        <asp:TextBox ID="txtClientWebsite" runat="server" class="form-control" placeholder="Enter URL" required="required"></asp:TextBox>
+                                        <asp:TextBox ID="txtClientWebsite" runat="server" class="form-control" placeholder="Enter URL" required="required" TextMode="Url"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="PhoneNo1">Phone No.</label>
-                                        <asp:TextBox ID="txtClientPhone1" runat="server" class="form-control" placeholder="Enter Phone No." required="required"></asp:TextBox>
+                                        <asp:TextBox ID="txtClientPhone1" runat="server" class="form-control" placeholder="Enter Phone No." required="required" TextMode="Number" MaxLength="10"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -62,13 +62,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="EmailId">Email Id</label>
-                                                <asp:TextBox ID="txtClientEmail" runat="server" class="form-control" placeholder="Enter Email ID" required="required"></asp:TextBox>
+                                                <asp:TextBox ID="txtClientEmail" runat="server" class="form-control" placeholder="Enter Email ID" required="required" TextMode="Email"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="PhoneNo2">Phone No.</label>
-                                                <asp:TextBox ID="txtClientphone2" runat="server" class="form-control" placeholder="Enter Phone No." required="required"></asp:TextBox>
+                                                <asp:TextBox ID="txtClientphone2" runat="server" class="form-control" placeholder="Enter Phone No." required="required" TextMode="Number"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
